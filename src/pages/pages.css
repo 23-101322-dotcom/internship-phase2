@@ -1149,3 +1149,722 @@ button, input { font-family: 'Rajdhani', sans-serif; }
   .subPage     { padding: 70px 16px 24px; }
   .digit       { width: 72px; height: 90px; font-size: 58px; }
 }
+
+
+.briefPage {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+  overflow-y: auto;
+}
+
+.briefBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px 60px;
+  gap: 18px;
+}
+
+.briefIcon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #0E2130;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.briefTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: #fff;
+}
+
+.briefSubtitle {
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.45);
+  margin-top: -10px;
+}
+
+.briefCard {
+  width: min(800px, 92vw);
+  background: rgba(10,16,26,0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-top: 8px;
+}
+
+.briefCard h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.briefCard p {
+  font-size: 16px;
+  color: rgba(210,225,240,0.7);
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.briefAlert {
+  color: #f97316;
+  font-weight: 700;
+}
+
+.briefTools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.briefTool {
+  background: rgba(15,25,40,0.8);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.briefToolIcon { font-size: 22px; flex-shrink: 0; }
+
+.briefTool strong {
+  display: block;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.briefTool p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+  text-align: left;
+}
+
+.briefObjective {
+  width: min(800px, 92vw);
+  background: rgba(10,20,35,0.7);
+  border: 1px solid rgba(255,165,0,0.15);
+  border-radius: 14px;
+  padding: 20px 28px;
+}
+
+.briefObjTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f59e0b;
+}
+
+.briefActions { display: flex; gap: 16px; margin-top: 8px; }
+
+
+.netPage {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
+
+.netTopbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 40px 20px;
+  flex-shrink: 0;
+}
+
+.netTitleBlock { display: flex; align-items: center; gap: 18px; }
+.netTitleBlock h1 { font-size: clamp(22px,3vw,34px); font-weight: 600; color: #fff; }
+.netTitleBlock p  { font-size: 15px; color: rgba(255,255,255,0.4); margin-top: 3px; }
+
+.netCounter { text-align: right; }
+.netCounter span   { display: block; font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+.netCounter strong { font-size: clamp(28px,4vw,42px); font-weight: 700; color: #fff; }
+
+.netLayout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 24px 32px;
+  gap: 24px;
+}
+
+.netSidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: rgba(8,14,22,0.85);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 18px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.netMapTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.netMapIcon { color: #f97316; font-size: 20px; }
+
+.netNodeList { display: flex; flex-direction: column; gap: 8px; }
+
+.netNodeItem {
+  background: rgba(15,24,36,0.7);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.netNodeItem:hover { background: rgba(25,38,56,0.9); }
+
+.netNodeActive {
+  background: rgba(14,33,48,0.95) ;
+  border-color: rgba(100,160,220,0.3);
+}
+
+.netNodeItemIcon {
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.netNodeItemIp    { font-size: 13px; color: rgba(100,160,220,0.8); font-family: monospace; margin-bottom: 2px; }
+.netNodeItemLabel { font-size: 14px; color: rgba(255,255,255,0.8); }
+.netNodeRecovered { font-size: 12px; color: #22c55e; margin-top: 4px; }
+
+
+.netMain {
+  flex: 1;
+  background: rgba(8,14,22,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 28px 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.netNodeHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.netNodeName { font-size: clamp(22px,3vw,34px); font-weight: 600; color: #fff; margin-bottom: 6px; }
+.netNodeIp   { font-size: 15px; color: rgba(100,160,220,0.6); font-family: monospace; }
+
+.netNodeTypeBadge {
+  background: rgba(20,40,65,0.9);
+  border: 1px solid rgba(100,160,220,0.2);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(200,220,240,0.8);
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.netFileBox {
+  background: rgba(12,20,32,0.75);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+
+.netFileTitle { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.netFileName  { font-family: monospace; font-size: 15px; color: rgba(180,210,240,0.85); margin-bottom: 14px; }
+
+.netRecoverBtn {
+  background: rgba(14,40,70,0.95);
+  border: 1px solid rgba(80,160,220,0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.netRecoverBtn:hover { background: rgba(25,60,100,0.98); transform: scale(1.02); }
+
+.netFileRecovered {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #22c55e;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.netFileRecovered svg {
+  width: 18px;
+  height: 18px;
+  stroke: #22c55e;
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.netConnTitle { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.7); }
+
+.netConnGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.netConnNode {
+  background: rgba(12,20,32,0.7);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: default;
+  transition: 0.2s;
+}
+
+.netConnKnown { cursor: pointer; }
+.netConnKnown:hover { background: rgba(22,36,55,0.9); }
+
+.netConnNodeIcon {
+  color: rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+}
+
+.netConnNodeIcon svg { width: 18px; height: 18px; }
+
+.netConnIp    { font-size: 13px; color: rgba(100,160,220,0.7); font-family: monospace; margin-bottom: 2px; }
+.netConnLabel { font-size: 14px; color: rgba(200,220,240,0.75); }
+
+.netScanBtn {
+  background: rgba(14,33,60,0.95);
+  border: 1px solid rgba(80,140,200,0.2);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: auto;
+}
+
+.netScanBtn:hover { background: rgba(22,50,90,0.98); }
+
+@media (max-width: 900px) {
+  .briefTools      { grid-template-columns: 1fr; }
+  .netLayout       { flex-direction: column; padding: 16px; }
+  .netSidebar      { width: 100%; max-height: 200px; }
+  .netConnGrid     { grid-template-columns: 1fr; }
+}
+
+
+.vaultPage {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
+
+.vaultTopbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 40px 20px;
+  flex-shrink: 0;
+}
+
+.vaultLayout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 24px 32px;
+  gap: 24px;
+}
+
+.vaultSidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: rgba(8,14,22,0.85);
+  border: 1px solid rgba(239,68,68,0.12);
+  border-radius: 18px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.vaultValveId {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Orbitron', monospace;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.vaultValvePressures {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vaultArrow { color: rgba(255,255,255,0.25); }
+
+.vaultValveHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.vaultGauge {
+  background: rgba(12,20,32,0.75);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+.vaultGaugeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+
+.vaultGaugeTrack {
+  width: 100%;
+  height: 12px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 10px;
+}
+
+.vaultGaugeFill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.vaultGaugeTarget {
+  position: absolute;
+  top: -4px;
+  width: 3px;
+  height: 20px;
+  background: rgba(100,180,220,0.8);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: left 0.3s ease;
+}
+
+.vaultGaugeLegend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+}
+
+.vaultStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.vaultStat {
+  background: rgba(12,20,32,0.75);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.vaultStatLabel {
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.vaultStatVal {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Orbitron', monospace;
+}
+
+.vaultControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.vaultBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(15,25,40,0.85);
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.vaultBtn:hover:not(:disabled) {
+  transform: scale(1.04);
+  background: rgba(25,40,62,0.98);
+}
+
+.vaultBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.vaultBtnDown { border-color: rgba(239,68,68,0.25); color: rgba(239,100,100,0.8); }
+.vaultBtnDown:hover:not(:disabled) { border-color: rgba(239,68,68,0.5); background: rgba(40,15,15,0.9); }
+
+.vaultBtnUp { border-color: rgba(34,197,94,0.25); color: rgba(34,197,94,0.8); }
+.vaultBtnUp:hover:not(:disabled) { border-color: rgba(34,197,94,0.5); background: rgba(10,35,20,0.9); }
+
+.vaultCurrentBig {
+  font-family: 'Orbitron', monospace;
+  font-size: 72px;
+  font-weight: 700;
+  width: 120px;
+  text-align: center;
+  transition: color 0.3s;
+  line-height: 1;
+}
+
+.vaultStabilized {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+}
+
+.vaultStabilized p {
+  font-size: 18px;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.vaultNav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.vaultNavDot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: rgba(15,25,40,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Orbitron', monospace;
+}
+
+.vaultNavDot:hover { border-color: rgba(255,255,255,0.35); color: #fff; }
+.vaultNavDotActive { border-color: rgba(100,180,220,0.6); color: #fff; background: rgba(14,33,48,0.9); }
+.vaultNavDotDone   { border-color: rgba(34,197,94,0.5); color: #22c55e; }
+
+@media (max-width: 900px) {
+  .vaultLayout  { flex-direction: column; padding: 16px; }
+  .vaultSidebar { width: 100%; max-height: 180px; }
+  .vaultStats   { grid-template-columns: repeat(3, 1fr); }
+  .vaultCurrentBig { font-size: 52px; }
+}
+
+
+.lvlTopRight {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.timerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  transition: color 0.3s;
+}
+
+.timerBox span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.5px;
+}
+
+.timerBox strong {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+.timerDanger span   { color: rgba(239,68,68,0.7); }
+.timerDanger strong {
+  color: #ef4444;
+  animation: timerPulse 0.8s ease-in-out infinite;
+}
+
+@keyframes timerPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+
+.failurePage {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.failureBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.failureIcon {
+  font-size: 80px;
+  animation: failShake 0.5s ease both;
+  filter: grayscale(0.3);
+}
+
+@keyframes failShake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-12px); }
+  40%  { transform: translateX(12px); }
+  60%  { transform: translateX(-8px); }
+  80%  { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+
+.failureTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  color: #ef4444;
+  text-shadow: 0 0 40px rgba(239,68,68,0.3);
+}
+
+.failureSub {
+  font-size: 18px;
+  color: rgba(210,225,240,0.6);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.failureCard {
+  background: rgba(30,10,10,0.7);
+  border: 1px solid rgba(239,68,68,0.15);
+  border-radius: 18px;
+  padding: 24px 32px;
+  width: 100%;
+}
+
+.failureCard p {
+  font-size: 16px;
+  color: rgba(200,180,180,0.65);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.btnRetry {
+  background: rgba(120,20,20,0.85);
+  border: 1px solid rgba(239,68,68,0.35);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 36px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.btnRetry:hover {
+  background: rgba(180,30,30,0.95);
+  border-color: rgba(239,68,68,0.6);
+  transform: scale(1.02);
+}
